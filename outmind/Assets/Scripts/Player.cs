@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     Vector2 movement;
     public Camera cam;
     private Vector2 mousePos;
+    private bool hasBackpack;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
     }
     private void FixedUpdate()
     {
@@ -28,6 +30,14 @@ public class Player : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("DeskBackpack") && hasBackpack == false)
+        {
+            hasBackpack = true;
+            print(hasBackpack);
+        }
     }
 }
 
