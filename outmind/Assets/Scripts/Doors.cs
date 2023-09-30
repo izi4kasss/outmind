@@ -11,6 +11,5 @@ public class Doors : MonoBehaviour
         {
             anim.SetTrigger("open");
         }
-        
     }
 }

@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Camera cam;
     private Vector2 mousePos;
     private bool hasBackpack;
+    private bool hasLom;
+    public GameObject checkpoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +35,25 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("DeskBackpack") && hasBackpack == false)
+        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("DeskBackpack") && !hasBackpack)
         {
             hasBackpack = true;
             print(hasBackpack);
+        }
+        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("Lom") && hasBackpack)
+        {
+            hasLom = true;
+        }
+        if (collision.gameObject.CompareTag("Enemy")){
+            transform.position = checkpoint.transform.position;
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            checkpoint = collision.gameObject;
         }
     }
 }
