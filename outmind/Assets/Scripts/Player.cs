@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private Vector2 mousePos;
     private bool hasBackpack;
     private bool hasLom;
-    public GameObject checkpoint;
+    public Checkpoint checkpoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +53,10 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
-            checkpoint = collision.gameObject;
+            if (checkpoint.number + 1 == collision.gameObject.GetComponent<Checkpoint>().number)
+            {
+                checkpoint = collision.gameObject.GetComponent<Checkpoint>();
+            }
         }
     }
 }
