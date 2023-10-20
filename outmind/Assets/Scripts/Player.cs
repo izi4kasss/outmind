@@ -40,12 +40,17 @@ public class Player : MonoBehaviour
             hasBackpack = true;
             print(hasBackpack);
         }
-        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("Lom") && hasBackpack)
+        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("Finish") && hasBackpack)
         {
             hasLom = true;
+            print("haslom");
         }
         if (collision.gameObject.CompareTag("Enemy")){
             transform.position = checkpoint.transform.position;
+        }
+        if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("ZaborT") && hasLom)
+        {
+            print("PeeP");
         }
         
     }
