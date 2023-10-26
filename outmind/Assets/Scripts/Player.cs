@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     public Camera cam;
     private Vector2 mousePos;
     private bool hasBackpack;
-    private bool hasLom;
+    public bool hasLom;
     public Checkpoint checkpoint;
+    public Sprite playerBackpack;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
         {
             hasBackpack = true;
             print(hasBackpack);
+            gameObject.GetComponent<SpriteRenderer>().sprite = playerBackpack;
         }
         if (Input.GetKey(KeyCode.E) && collision.gameObject.CompareTag("Finish") && hasBackpack)
         {

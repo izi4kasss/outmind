@@ -3,20 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Zabor : MonoBehaviour
+    
 {
     public Sprite zaborF;
-    // Start is called before the first frame update
-    void Start()
+    public Player script;
+    
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && script.hasLom)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = zaborF;
-        }  
+        }
     }
 }
