@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Checkpoint
   - ZaborT
+  - ZaborF
   layers:
   - Default
   - TransparentFX

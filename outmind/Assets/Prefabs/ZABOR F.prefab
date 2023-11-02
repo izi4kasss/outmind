@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5038953362764842213
+--- !u!1 &3612518109499602524
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,93 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6917887624613187442}
-  - component: {fileID: 1006931076823210004}
-  - component: {fileID: 5965518121534162747}
-  - component: {fileID: 7471166128050865067}
+  - component: {fileID: 5990329027797991367}
+  - component: {fileID: 5245450249723138697}
   m_Layer: 0
-  m_Name: ZABOR(TEST)1T
-  m_TagString: ZaborT
+  m_Name: Zab2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6917887624613187442
+--- !u!4 &5990329027797991367
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038953362764842213}
+  m_GameObject: {fileID: 3612518109499602524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.12, y: 18.3, z: 0}
-  m_LocalScale: {x: 23.036453, y: 23.036453, z: 23.036453}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 2099073932621305458}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1006931076823210004
+--- !u!65 &5245450249723138697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612518109499602524}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11012089, y: 0.15128286, z: 1}
+  m_Center: {x: 0.14700638, y: 0.07546346, z: 0}
+--- !u!1 &5193942993304876710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2099073932621305458}
+  - component: {fileID: 3346280909553840101}
+  - component: {fileID: 2423278862026526396}
+  - component: {fileID: 6873253028096763500}
+  m_Layer: 0
+  m_Name: ZABOR F
+  m_TagString: ZaborT
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2099073932621305458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193942993304876710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.58, y: 18.3, z: 0}
+  m_LocalScale: {x: 23.036453, y: 23.036453, z: 23.036453}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5990329027797991367}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3346280909553840101
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038953362764842213}
+  m_GameObject: {fileID: 5193942993304876710}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,7 +129,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 04780356cb473db488ce356254a63c68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff903f453628bdc4b98aa7b08613cc7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,13 +140,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5965518121534162747
+--- !u!61 &2423278862026526396
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038953362764842213}
+  m_GameObject: {fileID: 5193942993304876710}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -118,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018694513, y: 0.074874565}
+  m_Offset: {x: -0.13461296, y: 0.074874565}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,19 +183,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.446351, y: 0.1581985}
+  m_Size: {x: 0.2145141, y: 0.1581985}
   m_EdgeRadius: 0
---- !u!114 &7471166128050865067
+--- !u!114 &6873253028096763500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038953362764842213}
+  m_GameObject: {fileID: 5193942993304876710}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a34bf7f968ece974882f534c78cbf6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zaborF: {fileID: 5193942993304876710, guid: f37c98a6452c4254a82da26a4ac5132c, type: 3}
+  zaborF: {fileID: 5193942993304876710}
   script: {fileID: 2311929325783751902, guid: 3ad2b71a53d31e541be2c638615ea0c2, type: 3}
