@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - ZaborT
   - ZaborF
+  - Portal
   layers:
   - Default
   - TransparentFX
