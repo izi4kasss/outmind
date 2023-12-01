@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
 {
-    public Vector2[] points;
+    public Transform[]  points;
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +17,7 @@ public class EnemyVision : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            transform.parent.GetComponent<Pathfinding.AIPath>().enabled = true;
+            transform.parent.GetComponent<Pathfinding.AIDestinationSetter>().target = collision.gameObject.transform;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
