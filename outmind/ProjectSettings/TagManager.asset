@@ -11,6 +11,7 @@ TagManager:
   - ZaborT
   - ZaborF
   - Portal
+  - Tochka
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
+  - Tochka
   - 
   - 
   - 

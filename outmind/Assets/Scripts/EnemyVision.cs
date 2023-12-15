@@ -1,14 +1,16 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
 {
-    public Transform[]  points;
+    public Transform[] points;
+    public AIDestinationSetter looksAt;
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        looksAt = transform.parent.GetComponent<Pathfinding.AIDestinationSetter>();
     }
    
 
@@ -17,11 +19,9 @@ public class EnemyVision : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            transform.parent.GetComponent<Pathfinding.AIDestinationSetter>().target = collision.gameObject.transform;
+            looksAt.target = collision.gameObject.transform;
         }
+       
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        transform.parent.GetComponent<Pathfinding.AIPath>().enabled = false;
-    }
+    
 }
